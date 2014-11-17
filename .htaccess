@@ -1,4 +1,4 @@
-DirectoryIndex index.html index.php
+DirectoryIndex index.html
 RewriteEngine on
 RewriteCond $1 !^(index\.php|index\.html|public|robots\.txt)
 RewriteRule ^(.*)$ index.php/$1 [L]
