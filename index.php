@@ -45,7 +45,7 @@ if (defined('ENVIRONMENT'))
 			}
 				
 
-			if($_COOKIE["preview"] != 'true') {
+			if($_COOKIE["preview"] != 'true' && $_GET['preview'] != 'true') {
 				include 'index.html';
 				exit;
 			}
