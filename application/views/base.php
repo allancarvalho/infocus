@@ -90,10 +90,10 @@
 						<?php if($this->ion_auth->logged_in()) {  ?>
 						<?php if($this->ingles->hasNivel()) {  ?>
 						<li class="<?=($this->uri->segment(1)==='comprar')?'active':''?>">
-							<a href="<?php echo base_url('comprar') ?>">Comprar pontos</a>
+							<a href="<?php echo base_url('comprar') ?>">Comprar pacotes</a>
 						</li>
 						<li class="<?=($this->uri->segment(1)==='marcar')?'active':''?>">
-							<a href="<?php echo base_url('marcar') ?>">Marcar aulas</a>
+							<a href="<?php echo base_url('marcar') ?>">Agendar aulas</a>
 						</li>
 						<?php } else {  ?>
 						<li class="<?=($this->uri->segment(1)==='nivelamento')?'active':''?>">

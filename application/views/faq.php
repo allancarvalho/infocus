@@ -61,10 +61,10 @@
                 <p>D&ecirc; uma olhada no perfil dos professores.&nbsp;<a href="http://www.infocusvirtual.com.br/index.php?t=pagina&amp;a=visualiza&amp;cd=1">www.infocusvirtual.com.br/index.php</a></p>
             </p>
         </div>
-        <h3><a href="#">AULAS: Qual a duração das aulas?</a></h3>
+        <!-- <h3><a href="#">AULAS: Qual a duração das aulas?</a></h3>
         <div>
                 <p>Oferecemos aulas de&nbsp; 60 minutos. Quando voc&ecirc; compra cr&eacute;ditos para fazer as aulas voc&ecirc; compra cr&eacute;ditos de 60 minutos, assim sendo aulas de 60 minutos consomem um cr&eacute;dito.</p>
-        </div>
+        </div> -->
         <h3><a href="#">AULAS: Em que horários posso ter aulas?</a></h3>
         <div>
                 <p>Faremos sempre o poss&iacute;vel para oferecer aulas no hor&aacute;rio que desejar.</p>
