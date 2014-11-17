@@ -37,6 +37,18 @@ if (defined('ENVIRONMENT'))
 	{
 		case 'development':
 			error_reporting(E_ALL);
+
+
+
+			if($_GET['preview'] == 'true') {
+				setcookie("preview", 'true');
+			}
+				
+
+			if($_COOKIE["preview"] != 'true') {
+				include 'index.html';
+				exit;
+			}
 		break;
 	
 		case 'testing':
