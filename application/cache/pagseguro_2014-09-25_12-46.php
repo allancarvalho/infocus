@@ -1,0 +1,1 @@
+{"code":3,"status":"Paga","reference":30569144}
