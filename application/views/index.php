@@ -3,8 +3,15 @@
 	<div class="large-12 columns">
 	<ul class="example-orbit" data-orbit>
 		<li>
-			<img src="http://foundation.zurb.com/docs/assets/img/examples/satelite-orbit.jpg" alt="slide 1" />
+			<img src="<?php echo base_url('public/img/banner01.jpg') ?>" alt="slide 1" />
 		</li>
+		<li>
+			<img src="<?php echo base_url('public/img/banner02.jpg') ?>" alt="slide 1" />
+		</li>
+		<li>
+			<img src="<?php echo base_url('public/img/banner03.jpg') ?>" alt="slide 1" />
+		</li>
+
 	</ul>
 	</div>
 </div>

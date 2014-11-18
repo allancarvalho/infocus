@@ -40,14 +40,15 @@ if (defined('ENVIRONMENT'))
 
 
 
-			if($_GET['preview'] == 'true') {
+			if(isset($_GET['preview']) && $_GET['preview'] == 'true') {
 				setcookie("preview", 'true');
 			}
 				
-
-			if($_COOKIE["preview"] != 'true' && $_GET['preview'] != 'true') {
-				include 'index.html';
-				exit;
+			if(!isset($_COOKIE["preview"]) && !isset($_GET['preview'])) {
+					include 'index.html';
+					exit;
+				// if($_COOKIE["preview"] != 'true' && $_GET['preview'] != 'true') {
+				// }
 			}
 		break;
 	
