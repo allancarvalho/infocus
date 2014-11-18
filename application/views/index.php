@@ -1,7 +1,7 @@
 <?php include 'base.php' ?>
 <div class="row spacing">
 	<div class="large-12 columns">
-	<ul class="example-orbit" data-orbit>
+	<ul class="example-orbit" data-orbit data-options="timer_speed:4000;pause_on_hover:false;">
 		<li>
 			<img src="<?php echo base_url('public/img/banner01.jpg') ?>" alt="slide 1" />
 		</li>
