@@ -3,6 +3,7 @@ echo "Executing push on github";
 cd application/config/;
 cp database.php database.php.temp;
 cp database.phpprod database.php;
+git commit -m "autodeploy";
 cd ../..;
 git push; 
 
