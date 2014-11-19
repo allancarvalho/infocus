@@ -287,4 +287,31 @@ $(function() {
         nextText: 'Próximo',
         prevText: 'Anterior'
     });
-});
+
+    $(".marcar-form").on("submit", function(e) {
+        e.preventDefault(), form = this;
+
+        $.ajax({
+            url: this.action,
+            method: this.method,
+            data: $(this).serialize(),
+            dataType: 'json',
+            success: function(data){
+                
+                // $(form).appendThtml(data.message);
+                if(data.success) {
+                    var item = "<div class='result-form-marcar'><strong>Aula marcada com sucesso</strong><br>"+data.message+"</div>";
+                    form.reset();
+                } else {
+                    var item = "<div class='result-form-marcar'><strong>Houve algum erro na marcação da aula</strong><br>"+data.message+"</div>";
+                    // $("#messages").html(data.messages[0]);
+                }
+                $(item).appendTo(form);
+
+                setTimeout(function() {
+                    $(".result-form-marcar").remove();
+                }, 5000);
+            }
+        });
+    });
+}); 

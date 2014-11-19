@@ -35,10 +35,7 @@
                 <p>Para o <span style="color: rgb(0, 102, 153);">Curso Regul</span><span style="color: rgb(0, 102, 153);">ar</span> n&oacute;s fornecemos certificado a cada m&oacute;dulo conclu&iacute;do com &ecirc;xito.</p>
             </p>
         </div>
-        <h3><a href="#">O que acontece com as gravações das aulas?</a></h3>
-        <div>
-            <p>Gravamos uma parte da aula e vamos guardá-la por uma semana para que você e seu professor possam revisá-la para o caso de algum feedback específico. Nós também usaremos essas gravações para monitoramento das técnicas e abordagem dos professores.</p>
-        </div>
+
         <h3><a href="#">Qual metodologia usada pelos professores?</a></h3>
         <div>
             <p>N&oacute;s focamos em comunica&ccedil;&atilde;o, em desenvolver habilidades orais, dessa forma nossa metodologia principal &eacute; a abordagem comunicativa tendo em vista sempre as necessidades espec&iacute;ficas do aluno.</p>
@@ -55,12 +52,7 @@
         <div>
             <p>Isso vai depender do horário das aulas que você escolher, mas nosso objetivo inicial é que você possa se encaixar com um professor.</p>
         </div>
-        <h3><a href="#">PROFESSORES: Como posso saber mais sobre os professores?</a></h3>
-        <div>
-            <p>
-                <p>D&ecirc; uma olhada no perfil dos professores.&nbsp;<a href="http://www.infocusvirtual.com.br/index.php?t=pagina&amp;a=visualiza&amp;cd=1">www.infocusvirtual.com.br/index.php</a></p>
-            </p>
-        </div>
+       
         <!-- <h3><a href="#">AULAS: Qual a duração das aulas?</a></h3>
         <div>
                 <p>Oferecemos aulas de&nbsp; 60 minutos. Quando voc&ecirc; compra cr&eacute;ditos para fazer as aulas voc&ecirc; compra cr&eacute;ditos de 60 minutos, assim sendo aulas de 60 minutos consomem um cr&eacute;dito.</p>
@@ -94,11 +86,11 @@
         </div>
         <h3><a href="#">MARCAÇÃO E CANCELAMENTO: Eu posso cancelar e remarcar as minhas aulas?</a></h3>
         <div>
-                <p style="text-align: justify;">Sim, contanto que isso seja feito dentro do per&iacute;odo pr&eacute;-estabelecido ou a aula contar&aacute; como aula dada. Contamos com 24 horas de anteced&ecirc;ncia para cancelamento. Quanto &agrave; remarca&ccedil;&atilde;o, a escolha da nova data deve ser feita imediatamente no momento do cancelamento e a nova&nbsp;aula deve ser realizada no m&iacute;nimo 48 horas e no m&aacute;ximo um m&ecirc;s depois do cancelamento.</p>
+            <p style="text-align: justify;">Sim, contanto que isso seja feito dentro do per&iacute;odo pr&eacute;-estabelecido ou a aula contar&aacute; como aula dada. Contamos com 24 horas de anteced&ecirc;ncia para cancelamento. Quanto &agrave; remarca&ccedil;&atilde;o, a escolha da nova data deve ser feita imediatamente no momento do cancelamento e a nova&nbsp;aula deve ser realizada no m&iacute;nimo 48 horas e no m&aacute;ximo um m&ecirc;s depois do cancelamento.</p>
         </div>
         <h3><a href="#">MARCAÇÃO E CANCELAMENTO: Como eu marco uma aula?</a></h3>
         <div>
-                <p style="text-align: justify;">Para o <span style="color: rgb(0, 102, 153);">Curso de Conversa&ccedil;ccedil;&atilde;o</span>, &eacute; s&oacute; clicar na aba <span style="color: #000080">agendar aula&nbsp;</span> para verificar os hor&aacute;rios dispon&iacute;veis e mandar um e-mail para <span style="color: #0000ff"><span style=""><a href="mailto:contato@infocusvirtual.com.br">contato@infocusvirtual.com.br</a>&nbsp;</span></span><span style="color: #3366ff"> </span>solicitando a marca&ccedil;&atilde;o de aula. &Eacute; importante ressaltar que o agendamento das aulas deve ocorrer no per&iacute;odo de 30 dias. Por exemplo, no caso do aluno ter feito a op&ccedil;&atilde;o pelo pacote Basic, que consiste de 4 aulas de 60 minutos, o aluno ent&atilde;o dever&aacute; agendar as 4 aulas dentro do per&iacute;odo de 30 dias.</p>
+                <p style="text-align: justify;">Para o <span style="color: rgb(0, 102, 153);">Curso de Conversação</span>, &eacute; s&oacute; clicar na aba <span style="color: #000080">agendar aula&nbsp;</span> para verificar os hor&aacute;rios dispon&iacute;veis e mandar um e-mail para <span style="color: #0000ff"><span style=""><a href="mailto:contato@infocusvirtual.com.br">contato@infocusvirtual.com.br</a>&nbsp;</span></span><span style="color: #3366ff"> </span>solicitando a marca&ccedil;&atilde;o de aula. &Eacute; importante ressaltar que o agendamento das aulas deve ocorrer no per&iacute;odo de 30 dias. Por exemplo, no caso do aluno ter feito a op&ccedil;&atilde;o pelo pacote Basic, que consiste de 4 aulas de 60 minutos, o aluno ent&atilde;o dever&aacute; agendar as 4 aulas dentro do per&iacute;odo de 30 dias.</p>
                 <p style="text-align: justify;">Para o <span style="color: rgb(0, 102, 153);">Curso Regular,</span> o agendamento &eacute; realizado via email <a href="mailto:contato@infocusvirtual.com.br">contato@infocusvirtual.com.br</a>. &Eacute; importante ressaltar que o agendamento das aulas deve ocorrer no per&iacute;odo de 30 dias. Por exemplo, no caso do aluno ter feito a op&ccedil;&atilde;o pelo pacote Basic, que consiste de 4 aulas de 60 minutos, o aluno ent&atilde;o dever&aacute; agendar as 4 aulas dentro do per&iacute;odo de 30 dias.</p>
         </div>
         <h3><a href="#">MARCAÇÃO E CANCELAMENTO: O que acontece se eu me atrasar para uma aula?</a></h3>
@@ -120,7 +112,7 @@
         </div>
         <h3><a href="#">COMERCIAL: Como faço para me cadastrar?</a></h3>
         <div>
-                <p>Para o<span style="color: rgb(0, 102, 204);"> Curso de Conversa&ccedil;&atilde;o</span> clique emi&nbsp;<a href="http://www.infocusvirtual.com.br/index.php?t=aluno&amp;a=cadastrese">www.infocusvirtual.com.br/index.php</a> ou entre em contato conosco atrav&eacute;s <font color="#003366"><u><a href="mailto:contato@infocusvirtual.com.br">contato@infocusvirtual.com.br</a></u></font></p>
+                <p>Para o<span style="color: rgb(0, 102, 204);"> Curso de Conversa&ccedil;&atilde;o</span> clique em<a href="http://www.infocusvirtual.com.br/index.php?t=aluno&amp;a=cadastrese">www.infocusvirtual.com.br/index.php</a> ou entre em contato conosco atrav&eacute;s <font color="#003366"><u><a href="mailto:contato@infocusvirtual.com.br">contato@infocusvirtual.com.br</a></u></font></p>
                 <p>Para o <span style="color: rgb(0, 102, 204);">Curso Regular</span> o aluno deve se cadastrar via email&nbsp;<u style="color: rgb(0, 51, 102);"><a href="mailto:contato@infocusvirtual.com.br">contato@infocusvirtual.com.br</a></u></p>
         </div>
     </div>

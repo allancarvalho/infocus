@@ -1,5 +1,5 @@
 <div class="row">
-	<p>redirecionando para o paseguro...</p>
+	<p>redirecionando para o pagseguro...</p>
 </div>
 <?php 
     echo $this->pagseguro->get_button($config);

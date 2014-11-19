@@ -29,10 +29,7 @@
 				<p>
 					duração da aula
 					<select name="duracao">
-						<option value="30">30 minutos</option>
 						<option value="60">60 minutos</option>
-						<option value="90">90 minutos</option>
-						<option value="120">120 minutos</option>
 					</select>
 				</p>
 			</div>

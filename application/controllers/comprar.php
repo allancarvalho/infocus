@@ -11,6 +11,7 @@ class Comprar extends CI_Controller{
 
 	public function index()	{
 		$this->load->view('base');
+        $pacotes =
 		$this->load->view('comprar');
 		$this->load->view('base_end');
 	}
@@ -39,10 +40,16 @@ class Comprar extends CI_Controller{
 
 
         // insere produtos para botão PagSeguro
+        $precos['individual'] = array('hora_aula' => 80, 'creditos' => 1);
+        $precos['basic'] = array('hora_aula' => 76, 'creditos' => 4);
+        $precos['business'] = array('hora_aula' => 72, 'creditos' => 8);
+        $precos['personal'] = array('hora_aula' => 68, 'creditos' => 12);
+        $current = $precos[ $_POST['product'] ];
+        // echo $current['hora_aula'] * $current['creditos'];
     	$products[] = array(
     		'id' => '1',
-    		'descricao' => $_POST['product']['name'],
-    		'valor' => $_POST['product']['valor'],
+    		'descricao' => "Pacote ".$_POST['product'],
+    		'valor' =>  number_format((float)($current['hora_aula'] * $current['creditos']), 2, '.', ''),
     		'quantidade' => 1,
     		'peso' => 0
     		);
@@ -52,7 +59,7 @@ class Comprar extends CI_Controller{
         // ID do pedido
         $config['reference'] = rand(999, 99999999);
             
-        $this->ingles->saveOrder($this->ion_auth->user()->row()->user_id, $config['reference'], $_POST['product']['valor']);
+        $this->ingles->saveOrder($this->ion_auth->user()->row()->user_id, $config['reference'], $current['creditos']*60);
 
         // gera botão
         $array['config'] = $config;
