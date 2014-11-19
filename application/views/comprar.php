@@ -102,7 +102,7 @@
 				
 			</tbody>
 		</table>
-		<input type="submit">
+		<input type="submit" value="Finalizar pedido">
 
 	</form>
 
