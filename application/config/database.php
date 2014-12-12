@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = '127.0.0.1';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '123456';
-$db['default']['database'] = 'ingles';
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'cshosped_cshospe';
+$db['default']['password'] = 'Sesi0247#2';
+$db['default']['database'] = 'cshosped_db';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
