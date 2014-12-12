@@ -27,7 +27,7 @@
 				echo "Bem vindo ".$this->ion_auth->user()->row()->username;
 					// echo $this->ion_auth->user()->row()->points;
 				echo "<br>";
-				echo $this->points->getPoints($this->ion_auth->user()->row()->id). " minutos disponíveis";
+				echo $this->points->getPoints($this->ion_auth->user()->row()->id). " horas disponíveis";
 				echo "<br>";
 				if($this->points->hasNivel($this->ion_auth->user()->row()->id)) {
 					echo "Nivel: ".$this->points->getNivel($this->ion_auth->user()->row()->id);
@@ -40,7 +40,7 @@
 					<button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button tiny secondary dropdown">Administrar</button>
 					<ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true" tabindex="-1">
 						<li><a href="<?php echo base_url('agenda') ?>">Agenda de Aulas</a></li>
-						<li><a href="<?php echo base_url('nivelamento') ?>">Teste de nivelamento</a></li>
+						<li><a href="<?php echo base_url('admin/faq') ?>">Faq</a></li>
 						<li><a href="<?php echo base_url('auth') ?>">Usuários cadastrados</a></li>
 						<li><a href="<?php echo base_url('admin/teste_nivelamento') ?>">Teste nivelamento</a></li>
 						<li><a href="<?php echo base_url('auth/logout') ?>">Deslogar</a></li>

@@ -27,6 +27,25 @@ class Admin extends CI_Controller {
 		echo json_encode($this->ingles->getQuestions($nivel));
 	}
 
+	function faq() {
+		$this->load->view('base');
+		$this->load->view('admin/faq');
+		$this->load->view('base_end');
+	}
+	
+	function getFaq() {
+		echo json_encode($this->ingles->getFaq());
+	}
+
+	function deleteFaq($id) {
+		$this->ingles->deleteFaq($id);
+		return true;
+	}
+
+	function insertFaq() {
+		$this->ingles->insertFaq($_POST['pergunta'], $_POST['resposta']);
+	}
+
 	function deletePergunta($id) {
 		$this->ingles->deletePergunta($id);
 	}

@@ -764,6 +764,10 @@ class Auth extends CI_Controller {
 		$this->_render_page('auth/edit_group', $this->data);
 	}
 
+	function delete_user($id) {
+		$this->ion_auth->delete_user($id);
+	}
+
 
 	function _get_csrf_nonce()
 	{

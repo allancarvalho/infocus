@@ -22,7 +22,7 @@
 					<ul class="respostas no-bullet" ng-hide="hideSubmit">
 						<li ng-repeat="resposta in question.respostas">
 							<label>
-								<input type="radio" ng-checked="{{$index == 0}}" value="{{ resposta.resposta }}" name="question[{{$parent.$index}}]"/> {{ resposta.resposta }}
+								<input type="radio" value="{{ resposta.resposta }}" name="question[{{$parent.$index}}]"/> {{ resposta.resposta }}
 							</label>
 						</li>
 					</ul>

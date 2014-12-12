@@ -126,6 +126,44 @@ function handleAuthClick(event) {
 var formApp = angular.module('formApp', []);
 
 // // create angular controller and pass in $scope and $http
+function faqController($scope, $http) {
+    $scope.getQuestions = function() {
+        $http({
+            method  : 'GET',
+            url     : base_url+'admin/getFaq',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+        .success(function(data) {
+            $scope.questions = data
+        });
+    }
+
+    $scope.deleteFaq = function(id) {
+        $http({
+            method  : 'GET',
+            url     : base_url+'admin/deleteFaq/'+id,
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+        .success(function(data) {
+            $scope.getQuestions();
+        });
+    }
+
+    $scope.getQuestions();
+
+    $scope.submitFaq = function() {
+        $http({
+            method  : 'POST',
+            url     : base_url+'admin/insertFaq/',
+            data    : $.param($("#formFaq").serializeArray()),
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+        .success(function(data) {
+            $("#formFaq").get(0).reset();
+            $scope.getQuestions();
+        });
+    }
+}
 function formController($scope, $http) {
 
 	$scope.processForm = function() {
@@ -297,7 +335,7 @@ $(function() {
             data: $(this).serialize(),
             dataType: 'json',
             success: function(data){
-                
+
                 // $(form).appendThtml(data.message);
                 if(data.success) {
                     var item = "<div class='result-form-marcar'><strong>Aula marcada com sucesso</strong><br>"+data.message+"</div>";
@@ -314,4 +352,15 @@ $(function() {
             }
         });
     });
+    $("[data-mask]").each(function() { 
+        $(this).mask($(this).attr('data-mask'));
+    });
+    $(".DeleteUser").on("click", function(e) {
+        e.preventDefault();
+        if(confirm("Deseja deletar esse usuário?")) {
+            $.get($(this).attr("href"), function() {
+                location.reload();
+            });
+        }
+    })
 }); 

@@ -5,7 +5,8 @@ class Faq extends CI_Controller {
 	function index() {
 
 		$this->load->view('base');
-		$this->load->view('faq');
+		$arr['questions'] = $this->ingles->getFaq();
+		$this->load->view('faq', $arr);
 		$this->load->view('base_end');
 	}
 }

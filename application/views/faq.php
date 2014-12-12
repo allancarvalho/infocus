@@ -1,6 +1,16 @@
 <div class="row">
+    
     <div id="accordion">
-        <h3><a href="#">As aulas são feitas como?</a></h3>
+        <?php foreach ($questions as $question) {
+            ?>
+            <h3><a href="#"><?=$question->pergunta ?></a></h3>
+            <div>
+                <?=$question->resposta ?>
+            </div>    
+            <br>            
+            <?php
+        } ?>
+       <!--  <h3><a href="#">As aulas são feitas como?</a></h3>
         <div>
             <p>
                 <p>Pelo Skype, em tempo real.</p>
@@ -52,11 +62,6 @@
         <div>
             <p>Isso vai depender do horário das aulas que você escolher, mas nosso objetivo inicial é que você possa se encaixar com um professor.</p>
         </div>
-       
-        <!-- <h3><a href="#">AULAS: Qual a duração das aulas?</a></h3>
-        <div>
-                <p>Oferecemos aulas de&nbsp; 60 minutos. Quando voc&ecirc; compra cr&eacute;ditos para fazer as aulas voc&ecirc; compra cr&eacute;ditos de 60 minutos, assim sendo aulas de 60 minutos consomem um cr&eacute;dito.</p>
-        </div> -->
         <h3><a href="#">AULAS: Em que horários posso ter aulas?</a></h3>
         <div>
                 <p>Faremos sempre o poss&iacute;vel para oferecer aulas no hor&aacute;rio que desejar.</p>
@@ -114,6 +119,6 @@
         <div>
                 <p>Para o<span style="color: rgb(0, 102, 204);"> Curso de Conversa&ccedil;&atilde;o</span> clique em<a href="http://www.infocusvirtual.com.br/index.php?t=aluno&amp;a=cadastrese">www.infocusvirtual.com.br/index.php</a> ou entre em contato conosco atrav&eacute;s <font color="#003366"><u><a href="mailto:contato@infocusvirtual.com.br">contato@infocusvirtual.com.br</a></u></font></p>
                 <p>Para o <span style="color: rgb(0, 102, 204);">Curso Regular</span> o aluno deve se cadastrar via email&nbsp;<u style="color: rgb(0, 51, 102);"><a href="mailto:contato@infocusvirtual.com.br">contato@infocusvirtual.com.br</a></u></p>
-        </div>
+        </div> -->
     </div>
 </div>

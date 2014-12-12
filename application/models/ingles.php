@@ -11,7 +11,7 @@ class Ingles extends CI_Model {
 		foreach ($query->result() as $row){
 			$result = $row->points;
 		}
-		return $result;
+		return floor($result/60);
 	}
 
 	public function gravar_aula($hour_start, $hour_end, $duracao) {
@@ -236,6 +236,25 @@ class Ingles extends CI_Model {
 			$this->db->insert('nivel', $data);
 		}
 
+	}
+	function getFaq() {
+		return $this->db->get('faq')->result();
+	}
+
+	function insertFaq($pergunta, $resposta) {
+		$data = array(
+			'pergunta' => $pergunta,
+			'resposta' => $resposta
+			);
+		$this->db->insert('faq', $data);
+
+		return true;
+	}
+
+	function deleteFaq($id) {
+		$this->db->delete('faq', array('id' => $id)); 
+
+		return true;
 	}
 
 	function getNivel($id) {

@@ -11,7 +11,7 @@
 			</div>
 			<div class="large-6 columns">
 				<input type="text" name="skype" required  placeholder="Skype">
-				<input type="text" name="nascimento" required  placeholder="Nascimento">
+				<input type="text" name="nascimento" data-mask="99/99/9999" required  placeholder="Nascimento">
 				<input type="text" name="telefone" required  placeholder="Telefone">
 			</div>
 		</div>
