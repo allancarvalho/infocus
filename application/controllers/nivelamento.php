@@ -18,7 +18,7 @@ class Nivelamento extends CI_Controller{
 		$incorrectQuestionsId = array();
 		$currentLevel = $_POST['currentLevel'];
 		foreach ($_POST['idPergunta'] as $key => $idPergunta) {
-			if($this->ingles->validQuestion($idPergunta, $_POST['question'][$key])) {
+			if(isset($_POST['question'][$key]) && $this->ingles->validQuestion($idPergunta, $_POST['question'][$key])) {
 				$questionsOk++;
 				array_push($correctQuestionsId, $idPergunta);
 			} else {
@@ -35,7 +35,7 @@ class Nivelamento extends CI_Controller{
 			if($currentLevel > 1) {
 				$nivel = $niveis[$currentLevel-2];
 			} else {
-				$nivel = 'iniciante';
+				$nivel = 'INICIANTE';
 			}
 		}
 

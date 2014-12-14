@@ -6,10 +6,10 @@
 		<form id="formNivelamento" class="spacing" ng-submit="submitQuestions()">
 			{{loading}}
 			<div ng-show="formSubmitted">
-				Sua porcentagem de acertos foi {{ porcent }}
+				Você acertou {{ porcent }}% do teste.
 			</div>
 			<div ng-show="testEnd">
-				O teste terminou, seu nível é {{ nivelName }}
+				O teste terminou, seu nível é <h1 class="hightlightLevel">{{ nivelName }}</h1>
 			</div>
 
 			<input type="button" ng-show="loadNextAvailable" ng-click="getNextQuestions()" class="button" value="Carregar próximas questões">
