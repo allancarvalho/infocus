@@ -153,6 +153,8 @@ class Ingles extends CI_Model {
 
 	function insertAnswers($arr) {
 		$this->db->insert('respostas', $arr); 
+
+		return $this->db->insert_id();
 	}
 
 	function deletePergunta($id){
@@ -247,8 +249,8 @@ class Ingles extends CI_Model {
 		$query = $this->db->get_where('perguntas', array('nivel' => $currentLevel + 1));
 		return $query->num_rows > 0;
 	}
-	function validQuestion($id_pergunta, $resposta) {
-		$query = $this->db->get_where('perguntas', array('id' => $id_pergunta, 'reposta_certa' => $resposta));
+	function validQuestion($id_pergunta, $id_resposta) {
+		$query = $this->db->get_where('perguntas', array('id' => $id_pergunta, 'reposta_certa' => $id_resposta));
 		return $query->num_rows > 0;
 	}
 

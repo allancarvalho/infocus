@@ -11,16 +11,23 @@ class Admin extends CI_Controller {
 	function cadastrar_teste_nivelamento() {
 		// print_r($_POST);
 		// return false;
-		
-		$arrPerguntas = array('pergunta' => $_POST['pergunta'], 'nivel' => $_POST['nivel'], 'reposta_certa' => $_POST['resposta'][$_POST['resposta_certa']]);
+		$resposta_certa = $_POST['resposta'][$_POST['resposta_certa']];
+		$arrPerguntas = array('pergunta' => $_POST['pergunta'], 'nivel' => $_POST['nivel'], 'reposta_certa' => '');
 
 		// print_r($arrPerguntas);
 		$id_pergunta = $this->ingles->insertQuestion($arrPerguntas);
 		
 		foreach ($_POST['resposta'] as $value) {
 			$arrResposta = array('resposta' => $value, 'id_pergunta' =>  $id_pergunta);
-			$this->ingles->insertAnswers($arrResposta);
+			$idQuestion = $this->ingles->insertAnswers($arrResposta);
+			if($value == $resposta_certa) {
+				$idResposta = $idQuestion;
+			}
 		}
+
+		$data = array('reposta_certa' => $idResposta);
+		$this->db->where('id', $id_pergunta);
+		$this->db->update('perguntas', $data); 
 
 	}
 	function getPerguntas($nivel = 1) {
