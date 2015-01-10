@@ -123,7 +123,7 @@ function handleAuthClick(event) {
 
 
 // // define angular module/app
-var formApp = angular.module('formApp', []);
+var formApp = angular.module('formApp', ['ngSanitize']);
 
 // // create angular controller and pass in $scope and $http
 function faqController($scope, $http) {
@@ -219,13 +219,69 @@ function adminPerguntas($scope, $http) {
             }
         });
     }
-    $scope.changeNivel();
+    $scope.editQuestion = function($id) {
+        $scope.editando = $id;
+
+        $http.get(base_url+'index.php/admin/getPergunta/'+$id).success(function(data) {
+            $scope.cQuestion = data;
+        });  
+
+
+
+        $( "#dialog-edit" ).dialog({
+            resizable: false,
+            height:400,
+            width:400,
+            modal: true,
+            buttons: {
+                "Salvar": function() {
+                    $self = this;
+                    $scope.loading = "Salvando...";
+                    var serialized = $( "#dialog-edit form" ).serialize()
+                    console.log(serialized);
+                    $http({
+                        method: 'POST',
+                        url: base_url+'admin/editPergunta',
+                        data: serialized,
+                        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+                    }).success(function(data) {
+                        $( $self ).dialog( "close" );
+                        $scope.loading = "";
+                        $scope.changeNivel();
+
+                        
+
+                    });
+                    // $http.get(base_url+'index.php/admin/getPergunta/'+$id).success(function(data) {
+                    //     $scope.changeNivel();
+                    //     $scope.deletando = '';
+                    // });         
+                    // $( this ).dialog( "close" );
+                },
+                Cancel: function() {
+                    $scope.editando = '';
+                    $( this ).dialog( "close" );
+                }
+            }
+        });
+}
+$scope.changeNivel();
 }
 function testeNivelamentoController($scope, $http) {
     $scope.nivel = 1;
     $http.get(base_url+'index.php/admin/getPerguntas/'+$scope.nivel).success(function(data) {
         $scope.questions = data;
+        $scope.getNameNivel();
     });
+
+
+    $scope.getNameNivel = function() {
+        
+        $niveis = ['ELEMENTARY', 'PRE-INTERMEDIATE', 'INTERMEDIATE', 'UPPER INTERMEDIATE', 'ADVANCED' ];
+
+        $scope.nameNivel = $niveis[$scope.nivel - 1] || 'ELEMENTARY';
+
+    }
 
     $scope.submitQuestions = function() {
         $scope.loading = "Enviando...";

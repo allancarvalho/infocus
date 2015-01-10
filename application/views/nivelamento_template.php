@@ -1,7 +1,7 @@
 <div class="row" ng-app="formApp">
 	<div ng-controller="testeNivelamentoController">
 		<h1>Teste de nivelamento</h1>
-		<h3>Nivel {{ nivel }}</h3>
+		<h3>Nivel {{ nameNivel }}</h3>
 		<hr>
 		<form id="formNivelamento" class="spacing" ng-submit="submitQuestions()">
 			{{loading}}

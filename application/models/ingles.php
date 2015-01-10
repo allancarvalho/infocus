@@ -105,6 +105,14 @@ class Ingles extends CI_Model {
 		}
 	}
 
+	function editarResposta($id, $resposta) {
+		$data = array('resposta' => $resposta);
+
+		$this->db->where('id', $id);
+		$this->db->update('respostas', $data); 
+
+	}
+
 	function desconfirmar($id) {
 		if($this->ion_auth->is_admin()) {
 
@@ -150,6 +158,39 @@ class Ingles extends CI_Model {
 	function deletePergunta($id){
 		$this->db->delete('perguntas', array('id' => $id)); 
 	}
+
+	function getQuestion($id) {
+		if($this->ion_auth->is_admin()) {
+			$select = 'id, pergunta, nivel, reposta_certa';
+		} else {
+			$select = 'id, pergunta, nivel';
+		}
+		$this->db->start_cache();
+		
+		$this->db->select($select);
+
+		$query = $this->db->get_where('perguntas', array('id' => $id));
+
+		$this->db->stop_cache();
+		$this->db->flush_cache();
+
+
+		$result = $query->result();
+
+
+		foreach ($result as $value) {
+			$this->db->select('id, resposta');
+			$query2 = $this->db->get_where('respostas', array('id_pergunta' => $value->id));
+			$result2 = $query2->result();
+			if(!$this->ion_auth->is_admin()) {
+				shuffle($result2);
+			}
+			$value->respostas = $this->array_randsort($result2);
+		}
+
+		return $result[0];
+	}
+
 	function getQuestions($nivel) {
 
 		if($this->ion_auth->is_admin()) {

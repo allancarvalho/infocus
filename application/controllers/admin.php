@@ -27,6 +27,22 @@ class Admin extends CI_Controller {
 		echo json_encode($this->ingles->getQuestions($nivel));
 	}
 
+	function getPergunta($id) {
+		echo json_encode($this->ingles->getQuestion($id));
+	}
+
+	function editPergunta() {
+		foreach ($_POST as $id=>$resposta) {
+			$id = explode('-', $id);
+			$id = $id[1];
+			// echo $id;
+			// echo $resposta;
+			$this->ingles->editarResposta($id, $resposta);
+		}
+
+		echo "Ok";
+	}
+
 	function faq() {
 		$this->load->view('base');
 		$this->load->view('admin/faq');
@@ -54,5 +70,5 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/perguntas_cadastradas');
 		$this->load->view('base_end');
 	}
- 
+
 }

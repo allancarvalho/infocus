@@ -8,7 +8,7 @@
 			<ol>
 				<li ng-repeat="question in questions" ng-class="getClass(question.id)" id="question-{{question.id}}">
 					<div><strong>{{ question.pergunta }}</strong></div>
-					<div>{{ question.resposta }}</div>
+					<div ng-bind-html="question.resposta"></div>
 					<input type="button" ng-click="deleteFaq(question.id)" value="Deletar">
 				</li>
 			</ol>
