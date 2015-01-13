@@ -276,7 +276,7 @@ function testeNivelamentoController($scope, $http) {
 
 
     $scope.getNameNivel = function() {
-        
+
         $niveis = ['ELEMENTARY', 'PRE-INTERMEDIATE', 'INTERMEDIATE', 'UPPER INTERMEDIATE', 'ADVANCED' ];
 
         $scope.nameNivel = $niveis[$scope.nivel - 1] || 'ELEMENTARY';
@@ -323,6 +323,8 @@ function testeNivelamentoController($scope, $http) {
             $scope.questions = data;
             $scope.formSubmitted = false;
             $scope.hideSubmit = false;
+            $scope.getNameNivel();
+
             $scope.loadNextAvailable = false;
 
         });
